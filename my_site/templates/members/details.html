@@ -1,0 +1,18 @@
+{% extends 'members/base.html' %}
+
+{% block title %}Member Details{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><strong>Phone:</strong> {{ mymember.phone }}</p>
+            <p class="card-text"><strong>Member since:</strong> {{ mymember.joined_date }}</p>
+        </div>
+        <div class="card-footer">
+            <a href="/members" class="btn btn-secondary">Back to Members List</a>
+        </div>
+    </div>
+{% endblock %}

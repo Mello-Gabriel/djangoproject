@@ -1,0 +1,14 @@
+{% extends 'members/base.html' %}
+
+{% block title %}All Members{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">All Members</h1>
+    <div class="list-group">
+        {% for x in mymembers %}
+            <a href="{% url 'details' x.id %}" class="list-group-item list-group-item-action">
+                {{x.firstname}} {{x.lastname}}
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
