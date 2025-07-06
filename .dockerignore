@@ -1,1 +1,8 @@
 pgdata/
+.git
+.gitignore
+.python-version
+.env
+.mypy_cache/
+.venv/
+docker-compose.yml

@@ -15,6 +15,7 @@
         </div>
         <div class="card-footer">
             <a href="/members" class="btn btn-secondary">Back to Members List</a>
+            <a href="{% url 'edit_member' mymember.id %}" class="btn btn-primary">Edit Member</a>
         </div>
     </div>
 {% endblock %}

@@ -10,6 +10,7 @@ wheels/
 .venv
 .mypy_cache
 .vscode
+.env
 
 # PostgreSQL data
 pgdata/
