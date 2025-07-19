@@ -44,6 +44,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "django" },
     { name = "django-extensions" },
+    { name = "phonenumbers" },
     { name = "psycopg2-binary" },
 ]
 
@@ -51,7 +52,17 @@ dependencies = [
 requires-dist = [
     { name = "django", specifier = ">=5.2.4" },
     { name = "django-extensions", specifier = ">=3.2.3" },
+    { name = "phonenumbers", specifier = ">=8.13.41" },
     { name = "psycopg2-binary" },
+]
+
+[[package]]
+name = "phonenumbers"
+version = "9.0.9"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a3/0b/37acb7b16763991bdb675bef59bc75c6e34dbebf2c3e6bde3b0aca6bae1a/phonenumbers-9.0.9.tar.gz", hash = "sha256:c640545019a07e68b0bea57a5fede6eef45c7391165d28935f45615f9a567a5b", size = 2297605, upload-time = "2025-07-08T06:12:54.899Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e0/09/1a07ff1a2f1366d445cc68ab53b2d5f1a83e4d9cee1161f5a76c470d400f/phonenumbers-9.0.9-py2.py3-none-any.whl", hash = "sha256:13b91aa153f87675902829b38a556bad54824f9c121b89588bbb5fa8550d97ef", size = 2583343, upload-time = "2025-07-08T06:12:49.907Z" },
 ]
 
 [[package]]

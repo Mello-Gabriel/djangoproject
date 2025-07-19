@@ -3,17 +3,22 @@
 {% block title %}All Members{% endblock %}
 
 {% block content %}
-    <h1 class="mb-4">All Members</h1>
-    <div class="mb-3">
-        <a href="{% url 'add_member' %}" class="btn btn-success">
-            <span class="me-1">+</span> Registre novo usuário
-        </a>
-    </div>
-    <div class="list-group">
-        {% for x in mymembers %}
-            <a href="{% url 'details' x.id %}" class="list-group-item list-group-item-action">
-                {{x.firstname}} {{x.lastname}}
-            </a>
-        {% endfor %}
-    </div>
+<h1 class="mb-4">All Members</h1>
+<div class="mb-3">
+    <a href="{% url 'add_member' %}" class="btn btn-success">
+        <span class="me-1">+</span> Registre novo usuário
+    </a>
+</div>
+<div class="list-group">
+    {% for x in mymembers %}
+    <a href="{% url 'details' x.id %}" class="list-group-item list-group-item-action">
+        {{x.firstname}} {{x.lastname}}
+    </a>
+    {% endfor %}
+</div>
+<div class="container">
+    {% with firstname="Tobias" %}
+    <h1>Hello {{ firstname }}, how are you?</h1>
+    {% endwith %}
+</div>
 {% endblock %}
