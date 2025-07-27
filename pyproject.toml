@@ -9,4 +9,5 @@ dependencies = [
     "django-extensions>=3.2.3",
     "psycopg2-binary",
     "phonenumbers>=8.13.41",
+    "whitenoise>=6.9.0",
 ]
