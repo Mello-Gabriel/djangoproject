@@ -1,22 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="{% static 'myglobal.css' %}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Django App{% endblock %}</title>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'mystyles.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="/">Members Club</a>
-        </div>
-    </nav>
 
-    <div class="container">
-        {% block content %}
-        {% endblock %}
-    </div>
+<div class="topnav">
+  <a href="/">Home</a>
+  <a href="{% url 'members' %}">Members</a>
+</div>
+
+<div class="container">
+  {% block content %}
+  {% endblock %}
+</div>
+
 </body>
 </html>

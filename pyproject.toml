@@ -10,4 +10,5 @@ dependencies = [
     "psycopg2-binary",
     "phonenumbers>=8.13.41",
     "whitenoise>=6.9.0",
+    "python-dotenv>=1.1.1",
 ]

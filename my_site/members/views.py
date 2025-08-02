@@ -45,7 +45,7 @@ def add_member(request):
     return render(request, "members/add_member.html", {"form": form})
 
 
-def edit_member(request, id):
+def update_member(request, id):
     member = get_object_or_404(Member, pk=id)
 
     if request.method == "POST":
@@ -56,4 +56,12 @@ def edit_member(request, id):
     else:
         form = MemberForm(instance=member)
 
-    return render(request, "members/add_member.html", {"form": form, "member": member})
+    return render(request, "members/update_member.html", {"form": form, "member": member})
+
+
+def delete_member(request, id):
+    member = get_object_or_404(Member, pk=id)
+    if request.method == "POST":
+        member.delete()
+        return redirect("members")
+    return render(request, "members/delete_member.html", {"member": member})

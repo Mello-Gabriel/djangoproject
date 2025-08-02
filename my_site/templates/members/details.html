@@ -1,21 +1,16 @@
 {% extends 'members/base.html' %}
 
-{% block title %}Member Details{% endblock %}
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
 
 {% block content %}
-    <div class="card">
-        <div class="card-header">
-            <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
-        </div>
-        <div class="card-body">
-            <p class="card-text"><strong>Phone:</strong> {{ mymember.phone }}</p>
-            <p class="card-text"><strong>Member since:</strong> {{ mymember.joined_date }}</p>
-            <p class="card-text"><strong>Email:</strong> {{ mymember.email }}</p>
-            <p class="card-text"><strong>ID:</strong> {{ mymember.id }}</p
-        </div>
-        <div class="card-footer">
-            <a href="/members" class="btn btn-secondary">Back to Members List</a>
-            <a href="{% url 'edit_member' mymember.id %}" class="btn btn-primary">Edit Member</a>
-        </div>
-    </div>
-{% endblock %}
+  <div class="card">
+    <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+    <p>Phone: {{ mymember.phone }}</p>
+    <p>Member since: {{ mymember.joined_date }}</p>
+    <a href="{% url 'update_member' mymember.id %}" class="btn btn-primary">Edit</a>
+    <a href="{% url 'delete_member' mymember.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'members' %}" class="btn btn-secondary">Back to all members</a>
+  </div>
+{% endblock %}  
